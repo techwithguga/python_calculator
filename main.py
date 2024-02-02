@@ -1,18 +1,13 @@
-# + - * / calculator
 from art import logo
-
 
 def add(n1, n2):
     return n1 + n2
 
-
 def subtract(n1, n2):
     return n1 - n2
 
-
 def multiply(n1, n2):
     return n1 * n2
-
 
 def divide(n1, n2):
     return n1 / n2
@@ -20,11 +15,11 @@ def divide(n1, n2):
 
 operations = {"+": add, "-": subtract, "*": multiply, "/": divide}
 
-
 #recursion
 def calculator():
     print(logo)
-    num1 = int(input("what's the first nymber?: "))
+    
+    num1 = float(input("what's the first nymber?: "))
 
     for symbol in operations:
         print(symbol)
@@ -33,7 +28,7 @@ def calculator():
     while should_continue:
 
         operation_symbol = input("pick an operation: ")
-        num2 = int(input("what's the next number?: "))
+        num2 = float(input("what's the next number?: "))
         calculation_function = operations[operation_symbol]
         answer = calculation_function(num1, num2)
 
